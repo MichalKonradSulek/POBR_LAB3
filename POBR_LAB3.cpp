@@ -12,7 +12,7 @@
 int main()
 {
     std::ofstream outputFile;
-    outputFile.open("output.txt");
+    outputFile.open("../output.txt");
     if (outputFile.good()) {
         task1(outputFile);
         task2(outputFile);

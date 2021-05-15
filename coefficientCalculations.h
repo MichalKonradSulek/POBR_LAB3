@@ -77,15 +77,15 @@ ImageMomentums calculateImageMomentums(const cv::Mat1d& image) {
 }
 
 double calculateM1(const ImageMomentums& momentums) {
-    const double M02 = (momentums.m02 - pow(momentums.m01, 2)) / momentums.m00;
-    const double M20 = (momentums.m20 - pow(momentums.m10, 2)) / momentums.m00;
+    const double M02 = momentums.m02 - pow(momentums.m01, 2) / momentums.m00;
+    const double M20 = momentums.m20 - pow(momentums.m10, 2) / momentums.m00;
     return (M20 + M02) / pow(momentums.m00, 2);
 }
 
 double calculateM7(const ImageMomentums& momentums) {
-    const double M11 = (momentums.m11 - momentums.m10 * momentums.m01) / momentums.m00;
-    const double M02 = (momentums.m02 - pow(momentums.m01, 2)) / momentums.m00;
-    const double M20 = (momentums.m20 - pow(momentums.m10, 2)) / momentums.m00;
+    const double M11 = momentums.m11 - momentums.m10 * momentums.m01 / momentums.m00;
+    const double M02 = momentums.m02 - pow(momentums.m01, 2) / momentums.m00;
+    const double M20 = momentums.m20 - pow(momentums.m10, 2) / momentums.m00;
     return (M20 * M02 - pow(M11, 2)) / pow(momentums.m00, 4);
 }
 
