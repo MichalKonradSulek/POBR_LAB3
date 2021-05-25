@@ -29,7 +29,7 @@ void produceResultTask1(std::ostream& fileOutput, const std::string& fileName, c
     cv::Mat binaryImage = convertToBinary(image, 127);
     cv::Mat croppedImage = cropImage(binaryImage, DOUBLE_THRESHOLD);
     Task1Result result;
-    result.id = 1;
+    result.id = id;
     result.fileName = fileName;
     result.area = calculateArea(croppedImage, DOUBLE_THRESHOLD);
     result.perimeter = calculatePerimeter(croppedImage, DOUBLE_THRESHOLD);

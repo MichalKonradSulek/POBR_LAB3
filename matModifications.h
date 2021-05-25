@@ -8,10 +8,10 @@ cv::Mat1d convertToBinary(const cv::Mat& image, const unsigned threshold) {
     for (unsigned imageRow = 0; imageRow < image_.rows; ++imageRow) {
         for (unsigned imageCol = 0; imageCol < image_.cols; ++imageCol) {
             if (image_(imageRow, imageCol)[0] + image_(imageRow, imageCol)[1] + image_(imageRow, imageCol)[2] > 3 * threshold) {
-                result(imageRow, imageCol) = 1;
+                result(imageRow, imageCol) = 0;
             }
             else {
-                result(imageRow, imageCol) = 0;
+                result(imageRow, imageCol) = 1;
             }
         }
     }
@@ -58,10 +58,10 @@ cv::Mat1d filterPixels(const cv::Mat& image, const cv::Vec3b& filter) {
     for (unsigned imageRow = 0; imageRow < image_.rows; ++imageRow) {
         for (unsigned imageCol = 0; imageCol < image_.cols; ++imageCol) {
             if (image_(imageRow, imageCol) == filter) {
-                result(imageRow, imageCol) = 0;
+                result(imageRow, imageCol) = 1;
             }
             else {
-                result(imageRow, imageCol) = 1;
+                result(imageRow, imageCol) = 0;
             }
         }
     }

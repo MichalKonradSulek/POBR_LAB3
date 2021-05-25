@@ -37,7 +37,7 @@ void produceResultTask2(std::ostream& fileOutput, const cv::Mat& image, const cv
     //cv::imshow("", croppedImage);
     //cv::waitKey(-1);
     Task2Result result;
-    result.id = 1;
+    result.id = id;
     result.red = filter[2];
     result.angle = calculateAngle(centerOfGravity, centerOfImage);
     result.area = calculateArea(croppedImage, DOUBLE_THRESHOLD);
