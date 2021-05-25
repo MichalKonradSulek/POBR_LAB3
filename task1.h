@@ -44,9 +44,9 @@ void produceResultTask1(std::ostream& fileOutput, const std::string& fileName, c
 void task1(std::ostream& fileOutput) {
     std::cout << "Task1\n";
     fileOutput << "Task1\n";
-    produceResultTask1(fileOutput, "elipsa.dib", 1);
-    produceResultTask1(fileOutput, "elipsa1.dib", 2);
-    produceResultTask1(fileOutput, "kolo.dib", 3);
-    produceResultTask1(fileOutput, "prost.dib", 4);
-    produceResultTask1(fileOutput, "troj.dib", 5);
+    produceResultTask1(fileOutput, "../elipsa.dib", 1);
+    produceResultTask1(fileOutput, "../elipsa1.dib", 2);
+    produceResultTask1(fileOutput, "../kolo.dib", 3);
+    produceResultTask1(fileOutput, "../prost.dib", 4);
+    produceResultTask1(fileOutput, "../troj.dib", 5);
 }

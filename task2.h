@@ -63,6 +63,6 @@ void analyzeArrows(std::ostream& fileOutput, const std::string& fileName) {
 void task2(std::ostream& fileOutput) {
     std::cout << "Task2\n";
     fileOutput << "Task2\n";
-    analyzeArrows(fileOutput, "strzalki_1.dib");
-    analyzeArrows(fileOutput, "strzalki_2.dib");
+    analyzeArrows(fileOutput, "../strzalki_1.dib");
+    analyzeArrows(fileOutput, "../strzalki_2.dib");
 }
